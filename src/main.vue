@@ -50,7 +50,8 @@
 <script>
 import { GanttDataSource, GanttDependencyDataSource } from '@progress/kendo-datasource-vue-wrapper';
 import { Gantt, GanttColumn, GanttView} from '@progress/kendo-gantt-vue-wrapper';
-
+import { defineFont } from '@progress/kendo-drawing/pdf';
+import NanumSquareRoundR from './fonts/NanumSquareRoundR.ttf'
 export default {
     name: 'App',
     components: {
@@ -95,29 +96,21 @@ export default {
     },
     created: function() {
       kendo.culture('ko-KR')
-
+      kendo.defineFont({
+        "NanumSquareRoundR" : NanumSquareRoundR
+      })
     },
 }
 </script>
-
 <style>
-
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 @import url("https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css");
 /*
           Use the DejaVu Sans font for displaying and embedding in the PDF file.
           The standard PDF fonts do not support Unicode characters.
       */
 div {
-  font-family: "NanumSquareRound", "NanumSquare", "Noto Sans KR", "DejaVu Sans",
-    "Arial", sans-serif;
+  font-family: "NanumSquareRoundR", "Noto Sans KR" !important;
   font-size: 12px;
-}
-@font-face {
-  font-family: "NanumSquareRound";
-  src: url("/static/fonts/NanumSquareRoundR.ttf")
-    format("truetype");
-  font-weight: normal;
-  font-style: normal;
 }
 </style>
