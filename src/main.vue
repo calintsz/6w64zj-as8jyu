@@ -40,10 +40,10 @@
         <kendo-gantt-view :type="'day'"></kendo-gantt-view>
         <kendo-gantt-view :type="'week'" :selected="true"></kendo-gantt-view>
         <kendo-gantt-view :type="'month'"></kendo-gantt-view>
-        <kendo-gantt-column :field="'id'" :title="'ID'" :width="60"></kendo-gantt-column>
-        <kendo-gantt-column :field="'title'" :title="'Title'" :editable="true" :sortable="true"></kendo-gantt-column>
-        <kendo-gantt-column :field="'start'" :title="'Start Time'" :format="'{0:MM/dd/yyyy}'" :width="100" :editable="true" :sortable="true"></kendo-gantt-column>
-        <kendo-gantt-column :field="'end'" :title="'End Time'" :format="'{0:MM/dd/yyyy}'" :width="100" :editable="true" :sortable="true"></kendo-gantt-column>
+        <kendo-gantt-column :field="'id'" :title="'아이디'" :width="60"></kendo-gantt-column>
+        <kendo-gantt-column :field="'title'" :title="'제목'" :editable="true" :sortable="true"></kendo-gantt-column>
+        <kendo-gantt-column :field="'start'" :title="'시작'" :format="'{0:MM/dd/yyyy}'" :width="100" :editable="true" :sortable="true"></kendo-gantt-column>
+        <kendo-gantt-column :field="'end'" :title="'종료'" :format="'{0:MM/dd/yyyy}'" :width="100" :editable="true" :sortable="true"></kendo-gantt-column>
     </kendo-gantt>
 </div>
 </template>
@@ -96,9 +96,6 @@ export default {
     created: function() {
       kendo.culture('ko-KR')
 
-      kendo.pdf.defineFont({
-
-          })
     },
 }
 </script>
@@ -118,39 +115,9 @@ div {
 }
 @font-face {
   font-family: "NanumSquareRound";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff")
-    format("woff");
+  src: url("/NanumSquareRoundR.ttf")
+    format("truetype");
   font-weight: normal;
   font-style: normal;
-}
-/*
-        The example loads the DejaVu Sans from the Kendo UI CDN.
-        Other fonts have to be hosted from your application.
-        The official site of the Deja Vu Fonts project is
-        https://dejavu-fonts.github.io/.
-      */
-@font-face {
-  font-family: "DejaVu Sans";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff")
-    format("woff");
-}
-@font-face {
-  font-family: "DejaVu Sans";
-  font-weight: bold;
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff")
-    format("woff");
-}
-@font-face {
-  font-family: "DejaVu Sans";
-  font-style: italic;
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff")
-    format("woff");
-}
-@font-face {
-  font-family: "DejaVu Sans";
-  font-weight: bold;
-  font-style: italic;
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff")
-    format("woff");
 }
 </style>
