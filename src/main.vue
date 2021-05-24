@@ -115,7 +115,7 @@ div {
 }
 @font-face {
   font-family: "NanumSquareRound";
-  src: url("/NanumSquareRoundR.ttf")
+  src: url("NanumSquareRoundR.ttf")
     format("truetype");
   font-weight: normal;
   font-style: normal;
